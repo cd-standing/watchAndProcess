@@ -1,0 +1,5 @@
+{
+  "inDir": "./processing/in",
+  "outDir": "./processing/out",
+  "stylesheet": "./xslt/info-xml-to-json.xsl"
+}
