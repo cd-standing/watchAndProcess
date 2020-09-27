@@ -12,7 +12,7 @@ console.log(properties);
 // Load and set global properties from JSON file
 const inDir = properties.inDir// This is set to './processing/in'
 const outDir = properties.outDir// This is set to './processing/out'
-const stylesheet = properties.stylesheet
+const stylesheet = properties.stylesheet// This is specifi
 
 // Initialize watcher
 console.log("Initialise the watcher...");
@@ -26,7 +26,7 @@ watcher.on('add', path => {
   // Log out any added files
   console.log(`Watching ${inDir}`);
   console.log(`File ${path} has been added`);
-  regex(path);
+  createCommand(path);
 });
 
 /*
@@ -34,7 +34,7 @@ Regex on the filepath can happen here to get the right components for a command.
 In this case this is setting up a command for an XSL transform.
 The command is passed into the 'process' function which will execute the command.
 */
-const regex = (path) => {
+const createCommand = (path) => {
   const filePath = path.replace(/\\/g, '/')
   const regex = /(.+)(\/)(.+)(\.xml)/
   const fileNoExt = filePath.toString().replace(regex, "$3")
