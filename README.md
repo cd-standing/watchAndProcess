@@ -1,4 +1,4 @@
-# watcher
+# watch and process
 Simple process which watches a folder then processes any added files.
 
 ## Overview
@@ -45,9 +45,3 @@ command = `xslt3 -s:${path} -xsl:${stylesheet} -o:${outDir}/${fileNoExt}.json`
 could be a simple command to move and rename a file from one folder to another
 
 command = `move ${path} ${outDir}/${fileNoExt}-moved.txt`
-
-
-
-
-
-
