@@ -12,7 +12,7 @@ console.log(properties);
 // Load and set global properties from JSON file
 const inDir = properties.inDir// This is set to './processing/in'
 const outDir = properties.outDir// This is set to './processing/out'
-const stylesheet = properties.stylesheet// This is specifi
+const stylesheet = properties.stylesheet// This is specifically for the xslt command
 
 // Initialize watcher
 console.log("Initialise the watcher...");
@@ -60,7 +60,7 @@ const process = (filePath, fileNoExt, command) => {
     // the *entire* stdout and stderr (buffered)
     console.log(`-- stdout: ${stdout}`);
     console.log(`-- stderr: ${stderr}`);
-
+ 
     fs.readdir(inDir, function (err, files) {
       /*
       Check that the watched folder still has a file to delete.
